@@ -27,9 +27,7 @@ const Contact = () => {
           </label>
         </p>
         <p>
-          <span className="cursor-pointer">
             <Button type="submit">Send</Button>
-          </span>
         </p>
       </form>
     </div>
