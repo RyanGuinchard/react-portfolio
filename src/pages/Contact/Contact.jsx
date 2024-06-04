@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "../../components/Button"
 import "./Contact.css";
 
 const Contact = () => {
@@ -41,7 +42,7 @@ const Contact = () => {
           </label>
         </p>
         <p>
-            <button type="submit">Send</button>
+          <Button type="submit">Send</Button>
         </p>
       </form>
     </div>
