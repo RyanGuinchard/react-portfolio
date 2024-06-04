@@ -2,5 +2,10 @@ form {
     color: #D4ADFC;
     border: 2px solid #D4ADFC;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 10px;;
+}
+
+input, textarea {
+    background-color: #5C469C;;
+    border: 1px solid #D4ADFC;
 }
