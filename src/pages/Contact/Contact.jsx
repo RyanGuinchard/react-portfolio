@@ -24,6 +24,7 @@ const Contact = () => {
         className="flex flex-col space-y-4"
         onSubmit={handleSubmit}
       >
+        <input type="hidden" name="form-name" value="contact" />
         <p>
           <label>
             Your Name: <input type="text" name="name" />
