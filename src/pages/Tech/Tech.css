@@ -6,12 +6,3 @@
 .carousel .slide {
     padding-bottom: 30px;
 }
-
-.carousel {
-    touch-action: pan-y;
-    max-width: 95%;
-}
-
-.carousel-root {
-    touch-action: pan-y;
-}
