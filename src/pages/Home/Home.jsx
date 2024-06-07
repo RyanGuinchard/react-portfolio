@@ -11,7 +11,7 @@ const Home = () => {
         <p className="text-center text-3xl lg:text-4xl">
           I{" "}
           <Typewriter
-            words={[" am a React Developer.", " love creating intuitive user interfaces.", " am passionate about clean code.", "am a problem."]}
+            words={[" am a React Developer.", " love creating intuitive user interfaces.", " am passionate about clean code."]}
             loop={false}
           />
         </p>

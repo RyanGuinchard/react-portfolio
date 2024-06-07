@@ -6,3 +6,7 @@
 .carousel .slide {
     padding-bottom: 30px;
 }
+
+.carousel-root {
+    touch-action: pan-y;
+  }
