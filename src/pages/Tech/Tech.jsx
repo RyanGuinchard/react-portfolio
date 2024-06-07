@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react';
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import mongodb from "../../assets/mongodb.png";
@@ -11,6 +12,37 @@ import Button from "../../components/Button";
 import "./Tech.css";
 
 const Tech = () => {
+  const [isSwipeable, setIsSwipeable] = useState(true);
+  let touchStartX = 0;
+  let touchStartY = 0;
+
+  const handleTouchStart = (e) => {
+    touchStartX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
+  };
+
+  const handleTouchMove = (e) => {
+    const xDiff = touchStartX - e.touches[0].clientX;
+    const yDiff = touchStartY - e.touches[0].clientY;
+
+    // If the swipe is mostly vertical, disable swiping
+    if (Math.abs(yDiff) > Math.abs(xDiff)) {
+      setIsSwipeable(false);
+    } else {
+      setIsSwipeable(true);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('touchstart', handleTouchStart);
+    window.addEventListener('touchmove', handleTouchMove);
+
+    return () => {
+      window.removeEventListener('touchstart', handleTouchStart);
+      window.removeEventListener('touchmove', handleTouchMove);
+    };
+  }, []);
+
   return (
     <div className="tech flex flex-col justify-center items-center max-w-full sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl mx-auto space-y-4">
       <h1 className="text-5xl mb-5">Technology Stack</h1>
@@ -19,7 +51,7 @@ const Tech = () => {
           showThumbs={false}
           showStatus={false}
           useKeyboardArrows={true}
-          swipeable={true}
+          swipeable={isSwipeable}
           emulateTouch={true}
         >
           <div className="flex flex-col items-center">
@@ -81,7 +113,7 @@ const Tech = () => {
           showThumbs={false}
           showStatus={false}
           useKeyboardArrows={true}
-          swipeable={true}
+          swipeable={isSwipeable}
           emulateTouch={true}
         >
           <div className="flex flex-col items-center">

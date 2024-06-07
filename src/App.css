@@ -1,8 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Jersey+15&family=Montserrat&display=swap');
-html,body {
-    background: #1d267d;
+
+html, body {
+    height: 100%;
+    margin: 0;
     font-family: "Jersey 15", sans-serif;
-    height: 100vh;
+    overflow: auto;
 }
 
-
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+    background: linear-gradient(to bottom, #1d267d, #5C469C);
+}

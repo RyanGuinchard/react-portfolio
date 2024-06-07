@@ -89,7 +89,7 @@ const Contact = () => {
         </p>
         {message && <p className="text-center">{message}</p>}
       </form>
-      <div className="flex flex-col space-y-4 p-4 border-2 border-D4ADFC rounded-lg min-h-96 xl:ml-10 text-[#D4ADFC]">
+      <div className="flex flex-col space-y-4 p-4 border-2 border-[#D4ADFC] rounded-lg min-h-96 xl:ml-10 text-[#D4ADFC]">
         <h2>Contact Information</h2>
         <p>Email: ryanguincharddev@gmail.com</p>
         <div className="flex flex-row justify-center">
