@@ -12,7 +12,7 @@ import "./Tech.css";
 
 const Tech = () => {
   return (
-    <div className="tech flex flex-col justify-center items-center max-w-screen-xl mx-auto space-y-4">
+    <div className="tech flex flex-col justify-center items-center max-w-full sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl mx-auto space-y-4">
       <h1 className="text-5xl mb-5">Technology Stack</h1>
       <Carousel
         showThumbs={false}
