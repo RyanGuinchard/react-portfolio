@@ -18,7 +18,7 @@ const Tech = () => {
         showThumbs={false}
         showStatus={false}
         useKeyboardArrows={true}
-        swipeable={false}
+        swipeable={true}
       >
         <div className="flex flex-col items-center">
           <h2 className="text-3xl">MongoDb</h2>
@@ -77,7 +77,7 @@ const Tech = () => {
         showThumbs={false}
         showStatus={false}
         useKeyboardArrows={true}
-        swipeable={false}
+        swipeable={true}
       >
         <div className="flex flex-col items-center">
           <h2 className="text-3xl">TMDB Clone</h2>
