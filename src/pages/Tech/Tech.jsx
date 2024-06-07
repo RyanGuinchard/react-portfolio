@@ -28,7 +28,7 @@ const Tech = () => {
             built for modern application developers and for the cloud era.
           </p>
           <img
-            className="w-full h-64 object-contain object-center max-w-[500px]"
+            className="w-full h-32 sm:4-48 md:h-64 object-contain object-center max-w-[500px]"
             src={mongodb}
             alt="mongodb"
           />
@@ -41,7 +41,7 @@ const Tech = () => {
             applications.
           </p>
           <img
-            className="w-full h-64 object-contain object-center max-w-[500px]"
+            className="w-full h-32 sm:4-48 md:h-64 object-contain object-center max-w-[500px]"
             src={express}
             alt="express"
           />
@@ -54,7 +54,7 @@ const Tech = () => {
             companies.
           </p>
           <img
-            className="w-full h-64 object-contain object-center max-w-[500px]"
+            className="w-full h-32 sm:4-48 md:h-64 object-contain object-center max-w-[500px]"
             src={react}
             alt="react"
           />
@@ -67,7 +67,7 @@ const Tech = () => {
             JavaScript code outside a web browser.
           </p>
           <img
-            className="w-full h-64 object-contain object-center max-w-[500px]"
+            className="w-full h-32 sm:4-48 md:h-64 object-contain object-center max-w-[500px]"
             src={node}
             alt="node"
           />
@@ -87,7 +87,7 @@ const Tech = () => {
             Created a TMDB clone using React, the TMDB Api, and Tailwind CSS with the DaisyUI library.
           </p>
           <img
-            className="w-full h-64 object-contain object-center max-w-[500px]"
+            className="w-full h-32 sm:4-48 md:h-64 object-contain object-center max-w-[500px]"
             src={tmdb}
             alt="tmdb-clone"
           />
@@ -102,7 +102,7 @@ const Tech = () => {
           Discover what's safe for your pet! Our single-page web app lets you quickly find out what your pet can or can't have based on their type and the food you input. Keep your furry friend healthy with ease.
           </p>
           <img
-            className="w-full h-64 object-contain object-center max-w-[500px]"
+            className="w-full h-32 sm:4-48 md:h-64 object-contain object-center max-w-[500px]"
             src={pets}
             alt="safe pet foods"
           />
