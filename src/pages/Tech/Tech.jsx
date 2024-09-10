@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import mongodb from "../../assets/mongodb.png";
@@ -7,6 +7,7 @@ import react from "../../assets/react.png";
 import node from "../../assets/node.png";
 import tmdb from "../../assets/project1.png";
 import pets from "../../assets/project2.png";
+import df from "../../assets/project3.png";
 import Button from "../../components/Button";
 
 import "./Tech.css";
@@ -34,12 +35,12 @@ const Tech = () => {
   };
 
   useEffect(() => {
-    window.addEventListener('touchstart', handleTouchStart);
-    window.addEventListener('touchmove', handleTouchMove);
+    window.addEventListener("touchstart", handleTouchStart);
+    window.addEventListener("touchmove", handleTouchMove);
 
     return () => {
-      window.removeEventListener('touchstart', handleTouchStart);
-      window.removeEventListener('touchmove', handleTouchMove);
+      window.removeEventListener("touchstart", handleTouchStart);
+      window.removeEventListener("touchmove", handleTouchMove);
     };
   }, []);
 
@@ -154,6 +155,31 @@ const Tech = () => {
                 View Project
               </Button>
               <Button href="https://github.com/RyanGuinchard/pet-food-safety">
+                View Code
+              </Button>
+            </div>
+          </div>
+          <div className="flex flex-col items-center">
+            <h2 className="text-3xl">DecisionForge</h2>
+            <p className="text-2xl max-w-xl">
+              DecisionForge is a game randomizer app that generates unique
+              playthrough options for games like Fallout 4, Baldur's Gate 3,
+              Cyberpunk 2077, and Pokémon. Built with React, Node.js, and
+              MongoDB, it allows users to randomize character builds,
+              playstyles, and more. Users can reroll, lock choices, and explore
+              new gameplay challenges. Deployed on Netlify and Vercel, it
+              features a sleek, responsive UI with dynamic routing.
+            </p>
+            <img
+              className="w-full h-32 sm:4-48 md:h-64 object-contain object-center max-w-[500px]"
+              src={df}
+              alt="DecisionForge"
+            />
+            <div className="flex flex-col justify items-center pb-5 xl:flex-row xl:space-x-4">
+              <Button href="https://decisionforge.netlify.app/">
+                View Project
+              </Button>
+              <Button href="https://github.com/RyanGuinchard/DecisionForge">
                 View Code
               </Button>
             </div>
