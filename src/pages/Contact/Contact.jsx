@@ -88,10 +88,10 @@ const Contact = () => {
         <p className="text-lg xl:text-xl">Phone: (709)765-2219</p>
         <div className="flex space-x-4">
           <a href="https://www.linkedin.com/in/ryan-guinchard/" target="_blank" rel="noreferrer">
-            <FontAwesomeIcon className="transition-colors duration-300 text-[#5C469C] hover:text-[#D4ADFC] text-3xl" icon={faLinkedin} />
+            <FontAwesomeIcon className="transition-colors duration-300 text-[#5C469C] hover:text-[#D4ADFC] text-5xl" icon={faLinkedin} />
           </a>
           <a href="https://github.com/RyanGuinchard" target="_blank" rel="noreferrer">
-            <FontAwesomeIcon className="transition-colors duration-300 text-[#5C469C] hover:text-[#D4ADFC] text-3xl" icon={faGithub} />
+            <FontAwesomeIcon className="transition-colors duration-300 text-[#5C469C] hover:text-[#D4ADFC] text-5xl" icon={faGithub} />
           </a>
         </div>
       </div>
