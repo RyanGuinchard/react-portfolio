@@ -17,7 +17,7 @@ function AnimatedRoutes() {
         <Route path="/" element={<motion.div exit={{ opacity: 0 }}><Home /></motion.div>} />
         <Route path="/about" element={<motion.div exit={{ opacity: 0 }}><About /></motion.div>} />
         <Route path="/contact" element={<motion.div exit={{ opacity: 0 }}><Contact /></motion.div>} />
-        <Route path="/tech" element={<motion.div exit={{ opacity: 0 }}><Tech /></motion.div>} />
+        <Route path="/projects" element={<motion.div exit={{ opacity: 0 }}><Tech /></motion.div>} />
       </Routes>
     </AnimatePresence>
   );

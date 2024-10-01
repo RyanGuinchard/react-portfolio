@@ -16,7 +16,6 @@ const Navbar = () => {
   useEffect(() => {
     const activeElement = ref.current.querySelector(".active");
     if (activeElement) {
-      const reducedHeight = activeElement.offsetWidth - 20;
       controls.start({
         x: activeElement.offsetLeft,
         width: activeElement.offsetWidth,
@@ -82,14 +81,14 @@ const Navbar = () => {
         </li>
         <li>
           <Link
-            to="/tech"
-            onClick={() => setActiveLink("tech")}
+            to="/projects"
+            onClick={() => setActiveLink("projects")}
             className={`relative text-sm py-2 px-4 tracking-wide inline-block ${
-              activeLink === "tech" ? "active" : ""
+              activeLink === "projects" ? "active" : ""
             }`}
             style={{ color: "#D4ADFC" }}
           >
-            Tech
+            Projects
           </Link>
         </li>
         <li>
