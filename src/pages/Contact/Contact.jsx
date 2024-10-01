@@ -29,93 +29,69 @@ const Contact = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen text-2xl xl:flex-row mt-32 xl:mt-0">
+    <div className="flex flex-col items-center justify-center min-h-screen text-xl mt-16 space-y-10 xl:flex-row xl:space-y-0 xl:space-x-5 xl:items-start xl:pt-20">
+      {/* Contact form */}
       <form
         name="contact"
         method="POST"
         data-netlify="true"
-        className="flex flex-col mb-10 space-y-4 justify-center items-center min-h-96 xl:mb-0"
+        className="flex flex-col mb-10 space-y-4 items-center p-8 bg-[#1e1e3f] border-2 border-[#D4ADFC] rounded-lg w-4/5 max-w-lg xl:mb-0"
         onSubmit={handleSubmit}
       >
         <input type="hidden" name="form-name" value="contact" />
-        <div className="flex flex-col">
-          <label className="text-left">Your Name:</label>
+        <div className="flex flex-col w-full">
+          <label className="text-left text-[#D4ADFC]">Your Name:</label>
           <input
             type="text"
             name="name"
             value={name}
             onChange={(e) => setName(e.target.value)}
             required
-            className="pl-1"
+            className="p-2 mt-1 bg-[#5C469C] border-2 border-[#D4ADFC] rounded-lg focus:outline-none focus:border-[#D4ADFC] focus:ring focus:ring-[#D4ADFC] text-white text-base xl:text-lg"
           />
         </div>
-        <div className="flex flex-col">
-          <label className="text-left">Your Email:</label>
+        <div className="flex flex-col w-full">
+          <label className="text-left text-[#D4ADFC]">Your Email:</label>
           <input
             type="email"
             name="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
-            className="pl-1"
+            className="p-2 mt-1 bg-[#5C469C] border-2 border-[#D4ADFC] rounded-lg focus:outline-none focus:border-[#D4ADFC] focus:ring focus:ring-[#D4ADFC] text-white text-base xl:text-lg"
           />
         </div>
-        <p>
-          <div className="flex flex-col">
-            <label className="text-left">Your Message:</label>
-            <textarea
-              name="message"
-              value={messageText}
-              onChange={(e) => setMessageText(e.target.value)}
-              required
-              className="pl-1 h-16"
-            />
-          </div>
-        </p>
-        <p>
-          <button
-            type="submit"
-            className="
-              inline-block px-4 py-2 mt-4
-              text-sm font-medium text-white
-              bg-[#5C469C] border border-white border-opacity-[.08]
-              rounded-full
-              transition-colors duration-200
-              hover:bg-[#D4ADFC] hover:text-[#5C469C]
-            "
-          >
-            Send
-          </button>
-        </p>
-        {message && <p className="text-center">{message}</p>}
+        <div className="flex flex-col w-full">
+          <label className="text-left text-[#D4ADFC]">Your Message:</label>
+          <textarea
+            name="message"
+            value={messageText}
+            onChange={(e) => setMessageText(e.target.value)}
+            required
+            className="p-2 mt-1 bg-[#5C469C] border-2 border-[#D4ADFC] rounded-lg focus:outline-none focus:border-[#D4ADFC] focus:ring focus:ring-[#D4ADFC] text-white h-24 resize-none text-base xl:text-lg"
+            style={{ maxWidth: '100%' }} // Prevents overflow
+          />
+        </div>
+        <button
+          type="submit"
+          className="px-6 py-3 mt-4 text-xl bg-[#5C469C] border border-white border-opacity-[.08] rounded-full transition-all duration-300 hover:bg-[#D4ADFC] hover:text-[#5C469C] hover:scale-105"
+        >
+          Send
+        </button>
+        {message && <p className="text-center mt-4 text-white">{message}</p>}
       </form>
-      <div className="flex flex-col space-y-4 p-4 border-2 border-[#D4ADFC] rounded-lg min-h-96 xl:ml-10 text-[#D4ADFC]">
-        <h2>Contact Information</h2>
-        <p>Email: ryanguincharddev@gmail.com</p>
-        <div className="flex flex-row justify-center">
-          <a
-            className="mr-2"
-            href="https://www.linkedin.com/in/ryan-guinchard/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <FontAwesomeIcon
-              className="transition-colors duration-200 text-[#5C469C] hover:text-[#D4ADFC]"
-              icon={faLinkedin}
-              size="2x"
-            />
+
+      {/* Contact info */}
+      <div className="flex flex-col space-y-4 p-8 bg-[#1e1e3f] border-2 border-[#D4ADFC] rounded-lg w-4/5 max-w-lg text-[#D4ADFC] items-center xl:min-h-[300px] xl:text-lg">
+        <h2 className="text-lg xl:text-xl">Contact Information</h2>
+        <p className="text-lg xl:text-xl">Email: ryanguincharddev@gmail.com</p>
+        <p className="text-lg xl:text-xl">Phone: (709)765-2219</p>
+        <div className="flex space-x-4">
+          <a href="https://www.linkedin.com/in/ryan-guinchard/" target="_blank" rel="noreferrer">
+            <FontAwesomeIcon className="transition-colors duration-300 text-[#5C469C] hover:text-[#D4ADFC] text-3xl" icon={faLinkedin} />
           </a>
-          <a
-            className="ml-2"
-            href="https://github.com/RyanGuinchard"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <FontAwesomeIcon
-              className="transition-colors duration-200 text-[#5C469C] hover:text-[#D4ADFC]"
-              icon={faGithub}
-              size="2x"
-            />
+          <a href="https://github.com/RyanGuinchard" target="_blank" rel="noreferrer">
+            <FontAwesomeIcon className="transition-colors duration-300 text-[#5C469C] hover:text-[#D4ADFC] text-3xl" icon={faGithub} />
           </a>
         </div>
       </div>
